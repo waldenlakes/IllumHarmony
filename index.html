@@ -67,7 +67,7 @@
                   </div>
 
                   <div class="is-size-5 publication-authors">
-                    <span class="author-block">School of Computer Science, Northwestern Polytechnical University<br>Conferance name and year</span>
+                    <span class="author-block">School of Computer Science, Northwestern Polytechnical University<br>IEEE TETCI 2023</span>
                     <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
                   </div>
 
@@ -95,9 +95,20 @@
                     </a>
                   </span>
 
+                  <!-- Dataset Link. -->
+                  <span class="link-block">
+                    <a href="https://github.com/waldenlakes/IllumHarmony-Dataset" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                          <svg class="svg-inline--fa fa-images fa-w-18" aria-hidden="true" focusable="false" data-prefix="far" data-icon="images" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" data-fa-i2svg=""><path fill="currentColor" d="M480 416v16c0 26.51-21.49 48-48 48H48c-26.51 0-48-21.49-48-48V176c0-26.51 21.49-48 48-48h16v48H54a6 6 0 0 0-6 6v244a6 6 0 0 0 6 6h372a6 6 0 0 0 6-6v-10h48zm42-336H150a6 6 0 0 0-6 6v244a6 6 0 0 0 6 6h372a6 6 0 0 0 6-6V86a6 6 0 0 0-6-6zm6-48c26.51 0 48 21.49 48 48v256c0 26.51-21.49 48-48 48H144c-26.51 0-48-21.49-48-48V80c0-26.51 21.49-48 48-48h384zM264 144c0 22.091-17.909 40-40 40s-40-17.909-40-40 17.909-40 40-40 40 17.909 40 40zm-72 96l39.515-39.515c4.686-4.686 12.284-4.686 16.971 0L288 240l103.515-103.515c4.686-4.686 12.284-4.686 16.971 0L480 208v80H192v-48z"></path></svg><!-- <i class="far fa-images"></i> Font Awesome fontawesome.com -->
+                      </span>
+                      <span>Dataset</span>
+                      </a>
+                  </span></div>
+
                   <!-- Github link -->
                   <span class="link-block">
-                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
+                    <a href="https://github.com/waldenlakes/SIDNet" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
@@ -108,7 +119,7 @@
 
                 <!-- ArXiv abstract Link -->
                 <span class="link-block">
-                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
+                  <a href="https://arxiv.org/abs/2112.01314" target="_blank"
                   class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                     <i class="ai ai-arxiv"></i>
@@ -150,7 +161,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
+            Image harmonization aims at adjusting the appearance of the foreground to make it more compatible with the background. Without exploring background illumination and its effects on the foreground elements, existing works are incapable of generating a realistic foreground shading. In this paper, we decompose the image harmonization task into two sub-problems: 1) illumination estimation of the background image and 2) re-rendering of foreground objects under background illumination. Before solving these two sub-problems, we first learn a shading-aware illumination descriptor via a well-designed neural rendering framework, of which the key is a shading bases module that generates multiple shading bases from the foreground image. Then we design a background illumination estimation module to extract the illumination descriptor from the background. Finally, the Shading-aware Illumination Descriptor is used in conjunction with the neural rendering framework (SIDNet) to produce the harmonized foreground image containing a novel harmonized shading. Moreover, we construct a large-scale photo-realistic synthetic image harmonization dataset (IllumHarmony-Dataset) that contains numerous shading variations. Extensive experiments on both synthetic and real data demonstrate the superiority of the proposed method, especially in dealing with foreground shadings.
           </p>
         </div>
       </div>
@@ -164,35 +175,36 @@
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
+      <h2 class="title is-3">IllumHarmony-Dataset</h2>
       <div id="results-carousel" class="carousel results-carousel">
        <div class="item">
         <!-- Your image here -->
-        <img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/>
+        <img src="static/images/dataset_construction_pipeline.png" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
-          First image description.
+          The pipeline of constructing the pair of harmonized image and unharmonized image in the IllumHarmony-Dataset. It mainly covers data collection, rendering, and object placement. To train the proposed model, shading and albedo are also rendered.
         </h2>
       </div>
       <div class="item">
         <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="MY ALT TEXT"/>
+        <img src="static/images/illum_maps.png" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
-          Second image description.
+          The t-SNE visualization of our collected illumination maps, which contain diverse weather conditions, illuminant colors, time of the day, and locations.
         </h2>
       </div>
       <div class="item">
         <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="MY ALT TEXT"/>
+        <img src="static/images/dataset_example.png" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
-         Third image description.
+          High-quality photo-realistic examples from our constructed dataset. Red and green insets in the bottom row indicate that our dataset contains challenging shading variations.
        </h2>
      </div>
      <div class="item">
       <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="MY ALT TEXT"/>
+      <img src="static/images/dataset_example2.png" alt="MY ALT TEXT"/>
       <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
-    </div>
+        More examples from our constructed dataset.
+     </h2>
+   </div>
   </div>
 </div>
 </div>
@@ -200,80 +212,23 @@
 <!-- End image carousel -->
 
 
-
-
-<!-- Youtube video -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          
-          <div class="publication-video">
-            <!-- Youtube embed code here -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End youtube video -->
-
-
-<!-- Video carousel -->
+<!-- Image carousel -->
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <video poster="" id="video1" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <video poster="" id="video2" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <video poster="" id="video3" autoplay controls muted loop height="100%">\
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4"
-            type="video/mp4">
-          </video>
-        </div>
+      <h2 class="title is-3">SIDNet</h2>
+       <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/sidnet.png" alt="MY ALT TEXT"/>
+        <h2 class="subtitle has-text-centered">
+          An overview of our proposed image harmonization method. Our method has two training stages: training the Neural Rendering Framework (NRF) and training the Background Illumination Estimation Module (BIEM). The key to the first stage is to learn a shading-aware illumination descriptor, which is then estimated from the background image in the second stage. During inference, our image harmonization pipeline (i.e., SIDNet) combines partial modules of the NRF {f,h,r} and the BIEM q to adjust the foreground appearance using the estimated background illumination descriptor.
+       </h2>
       </div>
-    </div>
-  </div>
+</div>
+</div>
 </section>
-<!-- End video carousel -->
+<!-- End image carousel -->
 
-
-
-
-
-
-<!-- Paper poster -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
-
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
-          </iframe>
-        
-      </div>
-    </div>
-  </section>
-<!--End paper poster -->
 
 
 <!--BibTex citation -->
