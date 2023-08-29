@@ -75,7 +75,7 @@
                     <div class="publication-links">
                          <!-- Arxiv PDF link -->
                       <span class="link-block">
-                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
+                        <a href="https://arxiv.org/pdf/2112.01314.pdf" target="_blank"
                         class="external-link button is-normal is-rounded is-dark">
                         <span class="icon">
                           <i class="fas fa-file-pdf"></i>
@@ -181,7 +181,7 @@
         <!-- Your image here -->
         <img src="static/images/dataset_construction_pipeline.png" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
-          The pipeline of constructing the pair of harmonized image and unharmonized image in the IllumHarmony-Dataset. It mainly covers data collection, rendering, and object placement. To train the proposed model, shading and albedo are also rendered.
+          The pipeline of constructing the pair of harmonized image and unharmonized image in the IllumHarmony-Dataset. It mainly covers data collection, rendering, and object placement. To train the SIDNet, shading and albedo are also rendered.
         </h2>
       </div>
       <div class="item">
@@ -230,12 +230,68 @@
 <!-- End image carousel -->
 
 
+<!-- Image carousel -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">Our Results</h2>
+      <div id="results-carousel" class="carousel results-carousel">
+       <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/user_study_results.png" alt="MY ALT TEXT"/>
+        <h2 class="subtitle has-text-centered">
+          The results of SIDNet on real data across different weather conditions. Our intermediate shading results show that our SIDNet is capable of generating plausible shadings that are consistent with the background illumination.
+        </h2>
+      </div>
+      <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/non_humans_results.png" alt="MY ALT TEXT"/>
+        <h2 class="subtitle has-text-centered">
+          Generalization to non-human objects.
+        </h2>
+      </div>
+      <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/indoor_scenes_results.png" alt="MY ALT TEXT"/>
+        <h2 class="subtitle has-text-centered">
+          Generalization to indoor scenes.
+       </h2>
+     </div>
+  </div>
+</div>
+</div>
+</section>
+<!-- End image carousel -->
+
+
+<!-- Image carousel -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">Limitations</h2>
+       <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/limitations.png" alt="MY ALT TEXT"/>
+        <h2 class="subtitle has-text-centered">
+          We suggest that future work tackle the current challenges that SIDNet faces: (1) distortion and loss of texture details in albedo estimation module. (2) The lack of spatially-varying harmonization in indoor scenes.
+       </h2>
+      </div>
+</div>
+</div>
+</section>
+<!-- End image carousel -->
+
 
 <!--BibTex citation -->
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
-      <pre><code>BibTex Code Here</code></pre>
+      <pre><code>@article{hu2023sidnet,
+        title={{SIDNet}: Learning Shading-aware Illumination Descriptor for Image Harmonization},
+        author={Hu, Zhongyun and Nsampi, Ntumba Elie and Wang, Xue and Wang, Qing},
+        journal={IEEE Transactions on Emerging Topics in Computational Intelligence},
+        year={2023}
+      }</code></pre>
     </div>
 </section>
 <!--End BibTex citation -->
